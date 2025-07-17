@@ -1,0 +1,79 @@
+<!-- /views/partials/user-dropdown.ejs -->
+<div class="user-dropdown-section" id="user-dropdown-section" tabindex="-1">
+  <div class="dropdown-header">
+    <a href="/dashboard" class="user-icon-link"><span class="user-icon-big">👤</span></a>
+    <div>
+      <div class="dropdown-username"><%= user && (user.fullname || user.name || '') %></div>
+      <div class="dropdown-email"><%= user && user.email ? user.email : '' %></div>
+    </div>
+  </div>
+  <ul class="dropdown-list">
+    <li><a href="/dashboard"><span>📋</span> Dashboard</a></li>
+    <li><button id="logout-btn"><span>🚪</span> Logout</button></li>
+  </ul>
+</div>
+<style>
+  .user-dropdown-section {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 32px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.13);
+    min-width: 250px;
+    z-index: 100;
+    padding: 0.7em 1.1em 1.1em 1.1em;
+  }
+  .user-dropdown-section.open { display: block; animation: fadeIn 0.15s; }
+  .dropdown-header { display: flex; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 8px; }
+  .user-icon-big { font-size: 2.5em; margin-right: 0.7em; }
+  .dropdown-username { font-weight: 600; font-size: 1.12em; }
+  .dropdown-email { font-size: 0.98em; color: #888; }
+  .dropdown-list { margin: 0.7em 0 0; padding: 0; list-style: none; }
+  .dropdown-list li { margin: 0.45em 0; }
+  .dropdown-list a, .dropdown-list button {
+    display: flex; align-items: center; background: none; border: none; color: #247145; text-decoration: none;
+    width: 100%; font-size: 1em; padding: 6px 0; cursor: pointer;
+  }
+  .dropdown-list span { margin-right: 9px; font-size: 1.22em; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-11px);} to { opacity: 1; transform: translateY(0);} }
+</style>
+<script>
+  // Logic to open/close dropdown using the header trigger
+  document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.getElementById('user-dropdown-trigger');
+    const dropdown = document.getElementById('user-dropdown-section');
+    if (trigger && dropdown) {
+      let open = false;
+      const openDropdown = () => { dropdown.classList.add('open'); open = true; }
+      const closeDropdown = () => { dropdown.classList.remove('open'); open = false; }
+      trigger.addEventListener('click', () => open ? closeDropdown() : openDropdown());
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open ? closeDropdown() : openDropdown(); }
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && !trigger.contains(e.target)) closeDropdown();
+      });
+    }
+    // Logout button & toast logic
+    const logoutBtn = document.getElementById('logout-btn');
+    if(logoutBtn) {
+      logoutBtn.addEventListener('click', async () => {
+        try {
+          const res = await fetch('/auth/logout', { method: 'GET', credentials: 'include' });
+          if (res.ok) {
+            let toast = document.getElementById('toast-message');
+            if(!toast) toast = document.createElement('div');
+            toast.id = 'toast-message'
+            toast.className = 'toast';
+            toast.textContent = "You are logged out.";
+            document.body.appendChild(toast);
+            toast.classList.remove('hidden');
+            setTimeout(() => { window.location.href = '/'; }, 1100);
+          }
+        } catch(err) { alert("Logout failed!"); }
+      });
+    }
+  });
+</script>

@@ -1,0 +1,155 @@
+/* ====== cart.ejs ====== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - PetSewa</title>
+  <link rel="stylesheet" href="/css/common.css"/>
+  <link rel="stylesheet" href="/css/cart.css"/>
+</head>
+<body>
+<% if (user) { %>
+  <%- include('partials/header-authenticated', { user }) %>
+  <%- include('partials/user-dropdown', { user }) %>
+<% } else { %>
+  <header>
+    <a href="/" class="logo">
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="18" fill="#3e8e41"/>
+        <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white"/>
+        <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+      </svg>
+      <h1>PetSewa</h1>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/pet-medicines">Pet Medicines</a>
+      <a href="/cart" class="active">Cart</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/auth/login">Login</a>
+    </nav>
+  </header>
+<% } %>
+<main>
+  <!-- rest of your cart page content unchanged -->
+</main>
+</body>
+</html>
+
+---
+
+/* ====== contact-us.ejs ====== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact PetSewa for premium pet services at home. Find our location and get in touch!">
+  <meta name="keywords" content="pet services, contact, PetSewa, location">
+  <meta name="author" content="Pankaj, Shubham, Pushpakar">
+  <title>PetSewa - Contact Us</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233e8e41'/%3E%3Cpath d='M50 30c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18zm0 28c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3Ctext x='50' y='80' font-size='16' fill='white' text-anchor='middle' font-family='Segoe UI'%3EPetSewa%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<% if (user) { %>
+  <%- include('partials/header-authenticated', { user }) %>
+  <%- include('partials/user-dropdown', { user }) %>
+<% } else { %>
+  <header>
+    <a href="/" class="logo">
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+        <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+        <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+      </svg>
+      <h1>PetSewa</h1>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/pet-medicines">Pet Medicines</a>
+      <a href="/home-services">Home Services</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us" class="active">Contact</a>
+      <a href="/emergency">Emergency</a>
+      <a href="/auth/login" id="login-link" class="login-link">Login</a>
+    </nav>
+  </header>
+<% } %>
+<!-- rest of your contact-us page content unchanged -->
+</body>
+</html>
+
+---
+
+/* ====== dashboard.ejs ====== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetSewa - Dashboard</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233e8e41'/%3E%3Cpath d='M50 30c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18zm0 28c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3Ctext x='50' y='80' font-size='16' fill='white' text-anchor='middle' font-family='Segoe UI'%3EPetSewa%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<% if (user) { %>
+  <%- include('partials/header-authenticated', { user }) %>
+  <%- include('partials/user-dropdown', { user }) %>
+<% } %>
+<!-- rest of your dashboard page content unchanged -->
+</body>
+</html>
+
+---
+
+/* ====== emergency.ejs ====== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PetSewa Emergency Services - Get immediate 24/7 help for your pet's emergencies, accidents, and urgent care." />
+  <meta name="keywords" content="PetSewa, emergency, pet care, urgent help, vet support, animals, dog, cat, rescue, veterinary, first aid" />
+  <meta name="author" content="Pankaj, Shubham, Pushpakar" />
+  <title>PetSewa - Emergency Services</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/emergency.css" />
+</head>
+<body>
+<% if (user) { %>
+  <%- include('partials/header-authenticated', { user }) %>
+  <%- include('partials/user-dropdown', { user }) %>
+<% } else { %>
+  <header>
+    <a href="/" class="logo">
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+        <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+        <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+      </svg>
+      <h1>PetSewa</h1>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/pet-medicines">Pet Medicines</a>
+      <a href="/home-services">Home Services</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact</a>
+      <a href="/emergency" class="active">Emergency</a>
+      <a href="/auth/login" id="login-link" class="login-link">Login</a>
+    </nav>
+  </header>
+<% } %>
+<main>
+  <!-- rest of your emergency page content unchanged -->
+</main>
+</body>
+</html>
+
+---
+
+/* ====== Add blocks for error.ejs, home-services.ejs, index.ejs, pet-medicines.ejs, post-contact-us.ejs, post-dashboard.ejs, post-emergency.ejs, post-home-services.ejs, post-index.ejs, post-login-ejs-full, post-login.ejs, post-pet-medicines.ejs, signup.ejs similarly following this pattern. For login/signup, use only the public header/nav. */

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a wide range of pet medicines for cows, buffaloes, goats, hens, dogs, cats, rats, horses, rabbits, and tortoises at PetSewa.">
+  <meta name="keywords" content="pet medicines, animal healthcare, cow medicine, dog medicine, cat medicine, PetSewa">
+  <meta name="author" content="Pankaj, Shubham, Pushpakar">
+  <title>PetSewa - Pet Medicines</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/medicines.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233e8e41'/%3E%3Cpath d='M50 30c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18zm0 28c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3Ctext x='50' y='80' font-size='16' fill='white' text-anchor='middle' font-family='Segoe UI'%3EPetSewa%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <%- include('partials/header-authenticated', { user }) %>
+  
+  
+
+  <header class="hero med-hero">
+    <div class="hero-content">
+      <h1><span class="hero-icon">💊</span> Pet Medicines</h1>
+      <p class="hero-subtitle slogan">
+        Find medicines & wellness products for every animal.<br />
+        <span class="desc-fancy">Genuine products. Expert choice. Home delivery.</span>
+      </p>
+    </div>
+  </header>
+
+
+  <section id="animal-selection" class="animal-selection">
+    <div class="animal-banner">
+      <span role="img" aria-label="Animal icons">🐮 🐂 🐐 🐔 🐶 🐱 🐀 🐴 🐇 🐢</span>
+    </div>
+    <h2>Choose Your Pet</h2>
+    <p class="choose-desc">Select an animal to see curated medicines and products.</p>
+    <div class="animal-grid">
+      <div class="animal-card" data-animal="cow" tabindex="0">
+        <img src="/images/cow.jpg" alt="Cow" />
+        <h3>Cow</h3>
+      </div>
+      <div class="animal-card" data-animal="buffalo" tabindex="0">
+        <img src="/images/buffalo.jpg" alt="Buffalo" />
+        <h3>Buffalo</h3>
+      </div>
+      <div class="animal-card" data-animal="goat" tabindex="0">
+        <img src="/images/goat.jpg" alt="Goat" />
+        <h3>Goat</h3>
+      </div>
+      <div class="animal-card" data-animal="hen" tabindex="0">
+        <img src="/images/hen.jpg" alt="Hen" />
+        <h3>Hen</h3>
+      </div>
+      <div class="animal-card" data-animal="dog" tabindex="0">
+        <img src="/images/dog.jpg" alt="Dog" />
+        <h3>Dog</h3>
+      </div>
+      <div class="animal-card" data-animal="cat" tabindex="0">
+        <img src="/images/cat.jpg" alt="Cat" />
+        <h3>Cat</h3>
+      </div>
+      <div class="animal-card" data-animal="rat" tabindex="0">
+        <img src="/images/rat.jpg" alt="Rat" />
+        <h3>Rat</h3>
+      </div>
+      <div class="animal-card" data-animal="horse" tabindex="0">
+        <img src="/images/horse.jpg" alt="Horse" />
+        <h3>Horse</h3>
+      </div>
+      <div class="animal-card" data-animal="rabbit" tabindex="0">
+        <img src="/images/rabbit.jpg" alt="Rabbit" />
+        <h3>Rabbit</h3>
+      </div>
+      <div class="animal-card" data-animal="tortoise" tabindex="0">
+        <img src="/images/tortoise.jpg" alt="Tortoise" />
+        <h3>Tortoise</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="medicines" class="medicines visually-hidden" aria-hidden="true">
+    <h2>Medicines for <span id="selected-animal"></span></h2>
+    <button id="back-to-animals" class="cta-button"><span aria-hidden="true">←</span> Back to Animals</button>
+    <div class="medicine-grid"></div>
+  </section>
+
+  <div id="medicine-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close modal">×</button>
+      <img id="modal-image" src="" alt="Medicine image" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-discount"></p>
+      <p id="modal-description"></p>
+      <button class="cta-button add-to-cart" data-medicine-id="">Add to Cart</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <a href="/" class="logo" tabindex="0" aria-label="PetSewa Logo">
+          <svg width="40" height="40" aria-label="PetSewa Logo">
+            <circle cx="20" cy="20" r="18" fill="#3e8e41"/>
+            <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white"/>
+            <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+          </svg>
+        </a>
+        <address>
+          <p>© 2025 PetSewa | All Rights Reserved</p>
+          <p>Developed by Pankaj, Shubham, and Pushpakar</p>
+        </address>
+      </div>
+      <nav>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms &amp; Conditions</a> | 
+        <a href="/contact-us">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="/js/common.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const animalSection = document.getElementById('animal-selection');
+      const medicinesSection = document.getElementById('medicines');
+      const animalCards = document.querySelectorAll('.animal-card');
+      const selectedAnimalSpan = document.getElementById('selected-animal');
+      const backButton = document.getElementById('back-to-animals');
+      const medicineGrid = document.querySelector('.medicine-grid');
+      const modal = document.getElementById('medicine-modal');
+      const closeBtn = document.querySelector('.close-btn');
+      const addToCartBtn = document.querySelector('.add-to-cart');
+      
+      let medicinesData = [];
+      
+      // Load medicines data from CSV
+      Papa.parse('/data/medicines.csv', {
+        download: true,
+        header: true,
+        complete: function(results) {
+          medicinesData = results.data;
+          console.log('Medicines data loaded:', medicinesData.length, 'items');
+        },
+        error: function(error) {
+          console.error('Error loading medicines data:', error);
+        }
+      });
+      
+      // Animal card click handler
+      animalCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const animal = this.getAttribute('data-animal');
+          showMedicinesForAnimal(animal);
+        });
+        
+        // Keyboard accessibility
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const animal = this.getAttribute('data-animal');
+            showMedicinesForAnimal(animal);
+          }
+        });
+      });
+      
+      // Back button handler
+      backButton.addEventListener('click', function() {
+        animalSection.classList.remove('visually-hidden');
+        animalSection.setAttribute('aria-hidden', 'false');
+        medicinesSection.classList.add('visually-hidden');
+        medicinesSection.setAttribute('aria-hidden', 'true');
+      });
+      
+      // Close modal handler
+      closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+      
+      // Close modal on outside click
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+      
+      // Add to cart handler
+      addToCartBtn.addEventListener('click', function() {
+        const medicineId = this.getAttribute('data-medicine-id');
+        addToCart(medicineId);
+      });
+      
+      // Show medicines for selected animal
+      function showMedicinesForAnimal(animal) {
+        selectedAnimalSpan.textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
+        
+        // Filter medicines for the selected animal
+        const filteredMedicines = medicinesData.filter(medicine => 
+          medicine.animal.toLowerCase() === animal.toLowerCase() ||
+          medicine.animal.toLowerCase().includes(animal.toLowerCase())
+        );
+        
+        // Clear previous medicines
+        medicineGrid.innerHTML = '';
+        
+        if (filteredMedicines.length === 0) {
+          medicineGrid.innerHTML = '<p class="no-medicines">No medicines found for this animal. Please check back later.</p>';
+        } else {
+          // Create medicine cards
+          filteredMedicines.forEach(medicine => {
+            const medicineCard = document.createElement('div');
+            medicineCard.className = 'medicine-card';
+            medicineCard.setAttribute('data-id', medicine.id);
+            
+            const discount = medicine.discount ? 
+              `<span class="discount-tag">${medicine.discount}% OFF</span>` : '';
+            
+            medicineCard.innerHTML = `
+              ${discount}
+              <img src="${medicine.image || '/images/medicine-placeholder.jpg'}" alt="${medicine.name}" />
+              <h3>${medicine.name}</h3>
+              <p class="price">₹${medicine.price}</p>
+              <button class="view-details-btn">View Details</button>
+            `;
+            
+            medicineGrid.appendChild(medicineCard);
+            
+            // Add click event to view details
+            medicineCard.querySelector('.view-details-btn').addEventListener('click', function() {
+              showMedicineDetails(medicine);
+            });
+          });
+        }
+        
+        // Show medicines section, hide animal selection
+        animalSection.classList.add('visually-hidden');
+        animalSection.setAttribute('aria-hidden', 'true');
+        medicinesSection.classList.remove('visually-hidden');
+        medicinesSection.setAttribute('aria-hidden', 'false');
+      }
+      
+      // Show medicine details in modal
+      function showMedicineDetails(medicine) {
+        document.getElementById('modal-image').src = medicine.image || '/images/medicine-placeholder.jpg';
+        document.getElementById('modal-name').textContent = medicine.name;
+        document.getElementById('modal-price').textContent = `Price: ₹${medicine.price}`;
+        
+        const discountElem = document.getElementById('modal-discount');
+        if (medicine.discount) {
+          const originalPrice = parseFloat(medicine.price) / (1 - parseFloat(medicine.discount) / 100);
+          discountElem.textContent = `Original Price: ₹${originalPrice.toFixed(2)} (${medicine.discount}% OFF)`;
+          discountElem.classList.remove('visually-hidden');
+        } else {
+          discountElem.classList.add('visually-hidden');
+        }
+        
+        document.getElementById('modal-description').textContent = medicine.description || 'No description available.';
+        addToCartBtn.setAttribute('data-medicine-id', medicine.id);
+        
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+      
+      // Add to cart functionality
+      function addToCart(medicineId) {
+        const medicine = medicinesData.find(m => m.id === medicineId);
+        if (!medicine) return;
+        
+        let cart = JSON.parse(localStorage.getItem('petsewaCart')) || [];
+        
+        // Check if item already in cart
+        const existingItem = cart.find(item => item.id === medicineId);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            id: medicineId,
+            name: medicine.name,
+            price: medicine.price,
+            image: medicine.image,
+            quantity: 1
+          });
+        }
+        
+        localStorage.setItem('petsewaCart', JSON.stringify(cart));
+        
+        // Show confirmation
+        const confirmation = document.createElement('div');
+        confirmation.className = 'cart-confirmation';
+        confirmation.textContent = 'Added to cart!';
+        document.body.appendChild(confirmation);
+        
+        setTimeout(() => {
+          confirmation.classList.add('show');
+          setTimeout(() => {
+            confirmation.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(confirmation);
+            }, 300);
+          }, 2000);
+        }, 10);
+        
+        // Update cart count in header if function exists
+        if (typeof updateCartCount === 'function') {
+          updateCartCount();
+        }
+      }
+      
+      // Handle ESC key to close modal
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

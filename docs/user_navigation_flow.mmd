@@ -1,0 +1,17 @@
+flowchart TD
+  A[Public Index Page] -->|Login| B[Login Page]
+  B -->|Success| C[Post-login / Index]
+  C -->|To Dashboard| D[Dashboard (user data, bookings)]
+  C -->|Browse| E[Pet Medicines]
+  C -->|Browse| F[Home Services]
+  C -->|Browse| G[Contact/Other]
+  D -->|Logout| A
+  E -->|Dashboard Link| D
+  F -->|Dashboard Link| D
+  G -->|Dashboard Link| D
+  A -.->|Can browse all| E
+  A -.->|Can browse all| F
+  A -.->|Can browse all| G
+  E -->|Logout| A
+  F -->|Logout| A
+  G -->|Logout| A

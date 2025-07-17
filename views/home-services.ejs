@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Book premium pet services at home with PetSewa, including consulting, training, and grooming with exclusive discounts.">
+  <meta name="keywords" content="pet services, consulting, training, grooming, PetSewa">
+  <meta name="author" content="Pankaj, Shubham, Pushpakar">
+  <title>PetSewa - Home Services</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/services.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233e8e41'/%3E%3Cpath d='M50 30c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18zm0 28c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3Ctext x='50' y='80' font-size='16' fill='white' text-anchor='middle' font-family='Segoe UI'%3EPetSewa%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <%- include('partials/header-authenticated', { user }) %>
+
+
+<main>
+  <section class="hero hero--services">
+    <div class="hero-content">
+      <h2>Premium Pet Services at Home</h2>
+      <p class="slogan">Transform your pet’s life with our expert care!</p>
+      <a href="#services" class="cta-button">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Home Services</h2>
+    <div class="service-grid">
+      <div class="service-card" data-service="consulting">
+        <img src="/images/consulting.jpg" alt="Consulting" />
+        <h3>Consulting</h3>
+        <button class="cta-button book-btn">Request a Consult</button>
+      </div>
+      <div class="service-card" data-service="training">
+        <img src="/images/animal training2.jpg" alt="Animal Training" />
+        <h3>Animal Training</h3>
+        <p class="price">₹1500 <span class="original-price">₹1800</span> <span class="discount">17% off</span></p>
+        <button class="cta-button book-btn">Book Now</button>
+      </div>
+      <div class="service-card parent-card" data-service="grooming">
+        <img src="/images/dog-grooming-1.webp" alt="Grooming" />
+        <h3>Grooming</h3>
+        <p class="description">Professional grooming services at your convenience!</p>
+        <button class="cta-button expand-btn" onclick="showGroomingDetails()">Explore Grooming</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Sub-Services Modal Section -->
+  <section id="grooming-details" class="grooming-details hidden" aria-modal="true" tabindex="-1">
+    <div class="grooming-details-content">
+      <button class="back-btn" type="button" onclick="hideGroomingDetails()"><span aria-hidden="true">&#8592;</span> Back to Services</button>
+      <h2>Grooming Services</h2>
+      <div class="sub-cards">
+        <div class="service-card sub-card" data-service="bathing">
+          <img src="https://lirp.cdn-website.com/b9f74ae1/dms3rep/multi/opt/how-often-dog-bathing-960w.jpg" alt="Pet Bathing" />
+          <h3>Bathing</h3>
+          <p class="price">₹500 <span class="original-price">₹600</span> <span class="discount">17% off</span></p>
+          <button class="cta-button book-btn">Book Now</button>
+        </div>
+        <div class="service-card sub-card" data-service="nail-cutting">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPAZX2v9QHxiYnQ1F2821P9LVyUQtNqoU9Ug&s" alt="Nail Cutting" />
+          <h3>Nail Cutting</h3>
+          <p class="price">₹300 <span class="original-price">₹400</span> <span class="discount">25% off</span></p>
+          <button class="cta-button book-btn">Book Now</button>
+        </div>
+        <div class="service-card sub-card" data-service="haircut">
+          <img src="https://www.ibipr.com/wp-content/uploads/2024/04/202.jpeg" alt="Haircut" />
+          <h3>Haircut</h3>
+          <p class="price">₹700 <span class="original-price">₹900</span> <span class="discount">22% off</span></p>
+          <button class="cta-button book-btn">Book Now</button>
+        </div>
+        <div class="service-card sub-card" data-service="ear-cleaning">
+          <img src="https://www.beverlyhillsvets.com/blog/wp-content/uploads/2017/09/BevHills_iStock-481993518.jpg" alt="Ear Cleaning" />
+          <h3>Ear Cleaning</h3>
+          <p class="price">₹250 <span class="original-price">₹350</span> <span class="discount">29% off</span></p>
+          <button class="cta-button book-btn">Book Now</button>
+        </div>
+        <div class="service-card sub-card" data-service="full-grooming">
+          <img src="https://cdn.shopify.com/s/files/1/0654/5339/2129/files/postinstagrammascotassnacks_8_bf14c0f2-dd7d-4580-b684-fdd0564be270.png?v=1700225596" alt="Full Grooming" />
+          <h3>Full Grooming</h3>
+          <p class="price">₹1200 <span class="original-price">₹1500</span> <span class="discount">20% off</span></p>
+          <button class="cta-button book-btn">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal" aria-modal="true" tabindex="-1">
+    <div class="modal-content" role="dialog" aria-labelledby="modal-service">
+      <span class="close-btn" role="button" aria-label="Close modal">&times;</span>
+      <h3 id="modal-service"></h3>
+      <form id="booking-form" autocomplete="off">
+        <div class="form-group">
+          <label for="booking-date">Date</label>
+          <input type="date" id="booking-date" required />
+        </div>
+        <div class="form-group">
+          <label for="booking-time">Time</label>
+          <input type="time" id="booking-time" required />
+        </div>
+        <button type="submit" class="cta-button">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a href="/" class="logo">
+    <svg width="40" height="40">
+      <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+      <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+      <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+    </svg>
+    <p>© 2025 PetSewa | All Rights Reserved</p>
+    <p>Developed by Pankaj, Shubham, and Pushpakar</p>
+  </a>
+  <nav>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="/contact-us">Contact Us</a>
+  </nav>
+</footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body { background: #fafffb; margin:0; font-family:'Segoe UI',Arial,sans-serif; }
+.home-services-hero { background: linear-gradient(120deg, #EFFFFA 55%, #fce6ff 100%); border-bottom-left-radius:65px; border-bottom-right-radius:65px; text-align:center; padding:58px 0 50px; box-shadow:0 3px 32px #bbd6ff33; }
+.hero-content h2{font-size:2.2em;}
+.hero-content p{font-size:1.15em;margin-bottom:1.4em;}
+.services-grid-section{ margin:40px 0;}
+.services-grid{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;}
+.service-card{background:#fff;border-radius:18px;box-shadow:0 8px 38px #74fffa23;transition:.19s; text-align:center;min-width:260px; max-width:320px; padding:22px 10px 28px 10px; cursor:pointer;}
+.service-card:hover{box-shadow:0 17px 60px #379ff566,0 2px 0 #b4fbe5 inset;transform:scale(1.03) translateY(-6px);}
+@media (max-width:800px){.services-grid{gap:14px;}}
+.service-card img{width:75px;height:75px;border-radius: 15px;box-shadow:0 2px 8px #dcfbff;}
+.price{ color:#1db879; font-weight:600; font-size:1.05em;}
+.original-price{ color:#bbb; text-decoration:line-through; margin-left:7px;}
+.discount{background:#eafff4;color:#227c74;border-radius:7px;padding:0px 6px;margin-left:10px;}
+.parent-card .expand-btn { margin-top:14px; }
+.grooming-details { background: #fff; border-radius: 25px; box-shadow: 0 12px 30px #44ffdf73; margin:50px auto 25px; max-width:1040px;padding:30px 16px;transition:.21s;}
+.grooming-details.hidden{display:none;}
+.grooming-details-content{max-width:960px;margin:0 auto;}
+.sub-cards{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;}
+.sub-card{background:#f7fbfa;}
+.modal { display:none; position:fixed;left:0; top:0; right:0; bottom:0; align-items:center; justify-content:center;z-index:99;background:rgba(20,40,50,.26);}
+.modal-content{background:#fff;border-radius:16px;padding:37px 23px 27px;min-width:285px;max-width:88vw;text-align:left;position:relative;box-shadow:0 15px 50px #34ffd419;}
+.close-btn{position:absolute; right:15px; top:7px; font-size:2em; color:#b2b2c3; cursor:pointer;}
+.btn{padding:0.83em 1.43em;border-radius:14px;background:linear-gradient(92deg,#23cf8c,#42a7ff);color:#fff;cursor:pointer;border:none;font-weight:600;transition:box-shadow .18s,background .28s;}
+.btn:hover{background:linear-gradient(92deg,#5fe3bb,#68b8ff);color:#105d34;}
+@media (max-width:700px){.services-grid, .sub-cards{gap:10px;}}

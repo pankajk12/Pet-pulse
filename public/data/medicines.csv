@@ -1,0 +1,201 @@
+animal,id,name,price,originalPrice,discount,description,image
+cow,cow-med-1,Ceftiofur Sodium,1200,1500,20% off,Antibiotic for mastitis and respiratory infections in cows. Vet guidance required.,images/cow/ceftiofur-sodium.jpg
+cow,cow-med-2,Ivermectin,600,750,20% off,Controls internal and external parasites in cows, safe for dairy.,images/cow/ivermectin.jpg
+cow,cow-med-3,Calcium Gluconate,400,500,20% off,Prevents milk fever and supports bone health in dairy cows.,images/cow/calcium-gluconate.jpg
+cow,cow-med-4,Meloxicam,800,1000,20% off,Anti-inflammatory for pain relief in cows, ideal for lameness.,images/cow/meloxicam.jpg
+cow,cow-med-5,Fenbendazole,550,700,21% off,Broad-spectrum dewormer for gastrointestinal parasites in cows.,images/cow/fenbendazole.jpg
+cow,cow-med-6,Flumethasone,900,1100,18% off,Corticosteroid for allergic reactions and inflammation in cows.,images/cow/flumethasone.jpg
+cow,cow-med-7,Probiotics,400,500,20% off,Supports rumen health and digestion in cows.,images/cow/probiotics.jpg
+cow,cow-med-8,Oxytetracycline,650,800,19% off,Broad-spectrum antibiotic for infections like foot rot in cows.,images/cow/oxytetracycline.jpg
+cow,cow-med-9,Vitamin AD3E,450,550,18% off,Boosts immunity and milk production in cows.,images/cow/vitamin-ad3e.jpg
+cow,cow-med-10,Albendazole,500,620,19% off,Anti-parasitic for worms and flukes in cows.,images/cow/albendazole.jpg
+cow,cow-med-11,Enrofloxacin,700,850,18% off,Antibiotic for respiratory and urinary infections in cows.,images/cow/enrofloxacin.jpg
+cow,cow-med-12,Levamisole,350,450,22% off,Dewormer for roundworms and lungworms in cows.,images/cow/levamisole.jpg
+cow,cow-med-13,Tylosin,800,1000,20% off,Treats respiratory diseases like pneumonia in cows.,images/cow/tylosin.jpg
+cow,cow-med-14,Amoxicillin,600,750,20% off,Antibiotic for bacterial infections in cows.,images/cow/amoxicillin.jpg
+cow,cow-med-15,Mineral Mix,300,400,25% off,Trace minerals for overall cow health and productivity.,images/cow/mineral-mix.jpg
+cow,cow-med-16,Butaphosphan,550,700,21% off,Metabolic stimulant for recovery in weak cows.,images/cow/butaphosphan.jpg
+cow,cow-med-17,Vitamin B Complex,250,320,22% off,Supports metabolism and recovery in cows.,images/cow/vitamin-b-complex.jpg
+cow,cow-med-18,Dexamethasone,400,500,20% off,Anti-inflammatory for severe allergic reactions in cows.,images/cow/dexamethasone.jpg
+cow,cow-med-19,Closantel,500,620,19% off,Controls liver flukes and external parasites in cows.,images/cow/closantel.jpg
+cow,cow-med-20,Chloramphenicol,450,550,18% off,Antibiotic for bacterial infections, use under vet supervision.,images/cow/chloramphenicol.jpg
+buffalo,buffalo-med-1,Ceftiofur Hydrochloride,1300,1600,19% off,Antibiotic for respiratory and uterine infections in buffaloes.,images/buffalo/ceftiofur-hydrochloride.jpg
+buffalo,buffalo-med-2,Albendazole,500,620,19% off,Anti-parasitic for worms and flukes in buffaloes.,images/buffalo/albendazole.jpg
+buffalo,buffalo-med-3,Vitamin AD3E,450,550,18% off,Boosts immunity and milk production in buffaloes.,images/buffalo/vitamin-ad3e.jpg
+buffalo,buffalo-med-4,Oxytetracycline,700,850,18% off,Broad-spectrum antibiotic for infections in buffaloes.,images/buffalo/oxytetracycline.jpg
+buffalo,buffalo-med-5,Mineral Mix,350,450,22% off,Trace minerals for buffalo health and productivity.,images/buffalo/mineral-mix.jpg
+buffalo,buffalo-med-6,Meloxicam,850,1050,19% off,Pain relief for lameness and injuries in buffaloes.,images/buffalo/meloxicam.jpg
+buffalo,buffalo-med-7,Fenbendazole,550,700,21% off,Dewormer for gastrointestinal parasites in buffaloes.,images/buffalo/fenbendazole.jpg
+buffalo,buffalo-med-8,Probiotics,400,500,20% off,Improves digestion and rumen health in buffaloes.,images/buffalo/probiotics.jpg
+buffalo,buffalo-med-9,Ivermectin,600,750,20% off,Controls parasites in buffaloes, safe for dairy.,images/buffalo/ivermectin.jpg
+buffalo,buffalo-med-10,Calcium Gluconate,400,500,20% off,Prevents milk fever in buffaloes.,images/buffalo/calcium-gluconate.jpg
+buffalo,buffalo-med-11,Enrofloxacin,750,900,17% off,Treats respiratory infections in buffaloes.,images/buffalo/enrofloxacin.jpg
+buffalo,buffalo-med-12,Levamisole,350,450,22% off,Dewormer for roundworms in buffaloes.,images/buffalo/levamisole.jpg
+buffalo,buffalo-med-13,Tylosin,800,1000,20% off,Antibiotic for pneumonia in buffaloes.,images/buffalo/tylosin.jpg
+buffalo,buffalo-med-14,Amoxicillin,600,750,20% off,Treats bacterial infections in buffaloes.,images/buffalo/amoxicillin.jpg
+buffalo,buffalo-med-15,Vitamin B Complex,250,320,22% off,Supports metabolism in buffaloes.,images/buffalo/vitamin-b-complex.jpg
+buffalo,buffalo-med-16,Butaphosphan,550,700,21% off,Metabolic stimulant for weak buffaloes.,images/buffalo/butaphosphan.jpg
+buffalo,buffalo-med-17,Dexamethasone,400,500,20% off,Anti-inflammatory for allergies in buffaloes.,images/buffalo/dexamethasone.jpg
+buffalo,buffalo-med-18,Closantel,500,620,19% off,Controls liver flukes in buffaloes.,images/buffalo/closantel.jpg
+buffalo,buffalo-med-19,Flumethasone,900,1100,18% off,Corticosteroid for inflammation in buffaloes.,images/buffalo/flumethasone.jpg
+buffalo,buffalo-med-20,Chloramphenicol,450,550,18% off,Antibiotic for infections, vet supervision needed.,images/buffalo/chloramphenicol.jpg
+goat,goat-med-1,Levamisole,300,400,25% off,Dewormer for roundworms and lungworms in goats.,images/goat/levamisole.jpg
+goat,goat-med-2,Amoxicillin,450,550,18% off,Antibiotic for respiratory infections in goats.,images/goat/amoxicillin.jpg
+goat,goat-med-3,Vitamin B Complex,250,320,22% off,Supports metabolism and recovery in goats.,images/goat/vitamin-b-complex.jpg
+goat,goat-med-4,Tylosin,600,750,20% off,Treats respiratory diseases like pneumonia in goats.,images/goat/tylosin.jpg
+goat,goat-med-5,Coccizuril,400,500,20% off,Prevents coccidiosis in goats, safe for kids.,images/goat/coccizuril.jpg
+goat,goat-med-6,Fenbendazole,350,450,22% off,Broad-spectrum dewormer for goats.,images/goat/fenbendazole.jpg
+goat,goat-med-7,Enrofloxacin,500,620,19% off,Antibiotic for urinary infections in goats.,images/goat/enrofloxacin.jpg
+goat,goat-med-8,Probiotics,200,250,20% off,Supports gut health in goats.,images/goat/probiotics.jpg
+goat,goat-med-9,Ivermectin,300,380,21% off,Controls external parasites in goats.,images/goat/ivermectin.jpg
+goat,goat-med-10,Mineral Mix,150,200,25% off,Trace minerals for goat health.,images/goat/mineral-mix.jpg
+goat,goat-med-11,Albendazole,250,320,22% off,Anti-parasitic for worms in goats.,images/goat/albendazole.jpg
+goat,goat-med-12,Calcium Supplement,200,260,23% off,Supports bone health in goats.,images/goat/calcium-supplement.jpg
+goat,goat-med-13,Meloxicam,400,500,20% off,Pain relief for injuries in goats.,images/goat/meloxicam.jpg
+goat,goat-med-14,Vitamin AD3E,180,230,22% off,Boosts immunity in goats.,images/goat/vitamin-ad3e.jpg
+goat,goat-med-15,Oxytetracycline,350,450,22% off,Treats bacterial infections in goats.,images/goat/oxytetracycline.jpg
+goat,goat-med-16,Closantel,300,380,21% off,Controls flukes in goats.,images/goat/closantel.jpg
+goat,goat-med-17,Dexamethasone,250,320,22% off,Anti-inflammatory for goats.,images/goat/dexamethasone.jpg
+goat,goat-med-18,Butaphosphan,300,380,21% off,Metabolic stimulant for goats.,images/goat/butaphosphan.jpg
+goat,goat-med-19,Flumethasone,400,500,20% off,Corticosteroid for allergies in goats.,images/goat/flumethasone.jpg
+goat,goat-med-20,Chloramphenicol,250,320,22% off,Antibiotic for infections in goats.,images/goat/chloramphenicol.jpg
+hen,hen-med-1,Amprolium,200,250,20% off,Prevents coccidiosis in hens, safe for layers.,images/hen/amprolium.jpg
+hen,hen-med-2,Enrofloxacin,350,450,22% off,Treats bacterial infections like CRD in poultry.,images/hen/enrofloxacin.jpg
+hen,hen-med-3,Vitamin E Selenium,150,200,25% off,Boosts immunity and egg quality in hens.,images/hen/vitamin-e-selenium.jpg
+hen,hen-med-4,Tiamulin,400,500,20% off,Treats mycoplasmosis in chickens.,images/hen/tiamulin.jpg
+hen,hen-med-5,Erythromycin,300,380,21% off,Antibiotic for chronic respiratory disease in poultry.,images/hen/erythromycin.jpg
+hen,hen-med-6,Levamisole,150,200,25% off,Dewormer for roundworms in hens.,images/hen/levamisole.jpg
+hen,hen-med-7,Probiotics,120,150,20% off,Supports gut health in hens.,images/hen/probiotics.jpg
+hen,hen-med-8,Vitamin AD3E,130,170,24% off,Improves egg production in hens.,images/hen/vitamin-ad3e.jpg
+hen,hen-med-9,Oxytetracycline,250,320,22% off,Treats bacterial infections in poultry.,images/hen/oxytetracycline.jpg
+hen,hen-med-10,Amoxicillin,200,250,20% off,Antibiotic for poultry infections.,images/hen/amoxicillin.jpg
+hen,hen-med-11,Calcium Supplement,100,130,23% off,Supports eggshell strength in hens.,images/hen/calcium-supplement.jpg
+hen,hen-med-12,Tylosin,350,450,22% off,Treats respiratory infections in hens.,images/hen/tylosin.jpg
+hen,hen-med-13,Mineral Mix,90,120,25% off,Trace minerals for hen health.,images/hen/mineral-mix.jpg
+hen,hen-med-14,Flubendazole,150,200,25% off,Dewormer for worms in hens.,images/hen/flubendazole.jpg
+hen,hen-med-15,Vitamin B Complex,100,130,23% off,Supports metabolism in hens.,images/hen/vitamin-b-complex.jpg
+hen,hen-med-16,Chlortetracycline,200,250,20% off,Antibiotic for poultry diseases.,images/hen/chlortetracycline.jpg
+hen,hen-med-17,Sulfaquinoxaline,180,230,22% off,Prevents coccidiosis in hens.,images/hen/sulfaquinoxaline.jpg
+hen,hen-med-18,Colistin,250,320,22% off,Treats gut infections in hens.,images/hen/colistin.jpg
+hen,hen-med-19,Neomycin,200,250,20% off,Antibiotic for poultry diarrhea.,images/hen/neomycin.jpg
+hen,hen-med-20,Fenbendazole,150,200,25% off,Dewormer for hens.,images/hen/fenbendazole.jpg
+dog,dog-med-1,Fipronil,500,650,23% off,Spot-on for fleas and ticks in dogs.,images/dog/fipronil.jpg
+dog,dog-med-2,Milbemycin Oxime,800,1000,20% off,Heartworm preventive for dogs.,images/dog/milbemycin-oxime.jpg
+dog,dog-med-3,Glucosamine,600,750,20% off,Joint supplement for aging dogs.,images/dog/glucosamine.jpg
+dog,dog-med-4,Cephalexin,450,550,18% off,Antibiotic for skin infections in dogs.,images/dog/cephalexin.jpg
+dog,dog-med-5,Carprofen,700,850,18% off,Pain relief for arthritis in dogs.,images/dog/carprofen.jpg
+dog,dog-med-6,Ivermectin,400,500,20% off,Treats mange and parasites in dogs.,images/dog/ivermectin.jpg
+dog,dog-med-7,Probiotics,300,380,21% off,Supports digestion in dogs.,images/dog/probiotics.jpg
+dog,dog-med-8,Omega-3 Fatty Acids,350,450,22% off,Improves coat and skin health in dogs.,images/dog/omega-3-fatty-acids.jpg
+dog,dog-med-9,Enrofloxacin,500,620,19% off,Antibiotic for urinary infections in dogs.,images/dog/enrofloxacin.jpg
+dog,dog-med-10,Clavamox,550,700,21% off,Broad-spectrum antibiotic for dogs.,images/dog/clavamox.jpg
+dog,dog-med-11,Metronidazole,400,500,20% off,Treats diarrhea in dogs.,images/dog/metronidazole.jpg
+dog,dog-med-12,Tramadol,450,550,18% off,Pain relief for chronic conditions in dogs.,images/dog/tramadol.jpg
+dog,dog-med-13,Prednisolone,300,380,21% off,Anti-inflammatory for allergies in dogs.,images/dog/prednisolone.jpg
+dog,dog-med-14,Vitamin B Complex,250,320,22% off,Supports recovery in dogs.,images/dog/vitamin-b-complex.jpg
+dog,dog-med-15,Doxycycline,400,500,20% off,Antibiotic for tick-borne diseases in dogs.,images/dog/doxycycline.jpg
+dog,dog-med-16,Azithromycin,450,550,18% off,Treats respiratory infections in dogs.,images/dog/azithromycin.jpg
+dog,dog-med-17,Praziquantel,350,450,22% off,Dewormer for tapeworms in dogs.,images/dog/praziquantel.jpg
+dog,dog-med-18,Phenobarbital,500,620,19% off,Controls seizures in dogs.,images/dog/phenobarbital.jpg
+dog,dog-med-19,Benazepril,400,500,20% off,Treats heart conditions in dogs.,images/dog/benazepril.jpg
+dog,dog-med-20,Apoquel,600,750,20% off,Relieves itching and allergies in dogs.,images/dog/apoquel.jpg
+cat,cat-med-1,Selamectin,600,750,20% off,Topical for fleas and heartworms in cats.,images/cat/selamectin.jpg
+cat,cat-med-2,Praziquantel,400,500,20% off,Dewormer for tapeworms in cats.,images/cat/praziquantel.jpg
+cat,cat-med-3,Clindamycin,450,550,18% off,Antibiotic for dental infections in cats.,images/cat/clindamycin.jpg
+cat,cat-med-4,Lysine,300,380,21% off,Reduces feline herpes symptoms in cats.,images/cat/lysine.jpg
+cat,cat-med-5,Metronidazole,350,450,22% off,Treats diarrhea in cats.,images/cat/metronidazole.jpg
+cat,cat-med-6,Amoxicillin,400,500,20% off,Antibiotic for bacterial infections in cats.,images/cat/amoxicillin.jpg
+cat,cat-med-7,Probiotics,250,320,22% off,Supports gut health in cats.,images/cat/probiotics.jpg
+cat,cat-med-8,Omega-3 Fatty Acids,300,380,21% off,Improves coat health in cats.,images/cat/omega-3-fatty-acids.jpg
+cat,cat-med-9,Enrofloxacin,450,550,18% off,Treats urinary infections in cats.,images/cat/enrofloxacin.jpg
+cat,cat-med-10,Clavamox,500,620,19% off,Broad-spectrum antibiotic for cats.,images/cat/clavamox.jpg
+cat,cat-med-11,Prednisolone,300,380,21% off,Anti-inflammatory for allergies in cats.,images/cat/prednisolone.jpg
+cat,cat-med-12,Azithromycin,400,500,20% off,Treats respiratory infections in cats.,images/cat/azithromycin.jpg
+cat,cat-med-13,Doxycycline,350,450,22% off,Antibiotic for infections in cats.,images/cat/doxycycline.jpg
+cat,cat-med-14,Vitamin B Complex,200,250,20% off,Supports recovery in cats.,images/cat/vitamin-b-complex.jpg
+cat,cat-med-15,Milbemycin Oxime,500,620,19% off,Heartworm preventive for cats.,images/cat/milbemycin-oxime.jpg
+cat,cat-med-16,Fipronil,450,550,18% off,Spot-on for fleas in cats.,images/cat/fipronil.jpg
+cat,cat-med-17,Maropitant,400,500,20% off,Prevents vomiting in cats.,images/cat/maropitant.jpg
+cat,cat-med-18,Amlodipine,350,450,22% off,Treats hypertension in cats.,images/cat/amlodipine.jpg
+cat,cat-med-19,Famciclovir,500,620,19% off,Antiviral for feline herpesvirus.,images/cat/famciclovir.jpg
+cat,cat-med-20,Methimazole,400,500,20% off,Treats hyperthyroidism in cats.,images/cat/methimazole.jpg
+rat,rat-med-1,Ivermectin,150,200,25% off,Treats mites and lice in rats.,images/rat/ivermectin.jpg
+rat,rat-med-2,Enrofloxacin,200,250,20% off,Antibiotic for respiratory infections in rats.,images/rat/enrofloxacin.jpg
+rat,rat-med-3,Vitamin C,100,130,23% off,Prevents scurvy in rats.,images/rat/vitamin-c.jpg
+rat,rat-med-4,Probiotics,120,150,20% off,Supports digestion in rats.,images/rat/probiotics.jpg
+rat,rat-med-5,Amoxicillin,180,220,18% off,Treats bacterial infections in rats.,images/rat/amoxicillin.jpg
+rat,rat-med-6,Doxycycline,150,200,25% off,Antibiotic for respiratory diseases in rats.,images/rat/doxycycline.jpg
+rat,rat-med-7,Metronidazole,120,150,20% off,Treats gut infections in rats.,images/rat/metronidazole.jpg
+rat,rat-med-8,Calcium Supplement,80,100,20% off,Supports bone health in rats.,images/rat/calcium-supplement.jpg
+rat,rat-med-9,Vitamin B Complex,90,120,25% off,Supports metabolism in rats.,images/rat/vitamin-b-complex.jpg
+rat,rat-med-10,Azithromycin,150,200,25% off,Treats infections in rats.,images/rat/azithromycin.jpg
+rat,rat-med-11,Prednisolone,100,130,23% off,Anti-inflammatory for rats.,images/rat/prednisolone.jpg
+rat,rat-med-12,Clindamycin,120,150,20% off,Antibiotic for skin infections in rats.,images/rat/clindamycin.jpg
+rat,rat-med-13,Fenbendazole,100,130,23% off,Dewormer for rats.,images/rat/fenbendazole.jpg
+rat,rat-med-14,Lysine,90,120,25% off,Supports immunity in rats.,images/rat/lysine.jpg
+rat,rat-med-15,Mineral Mix,80,100,20% off,Trace minerals for rat health.,images/rat/mineral-mix.jpg
+rat,rat-med-16,Omega-3 Fatty Acids,100,130,23% off,Improves coat health in rats.,images/rat/omega-3-fatty-acids.jpg
+rat,rat-med-17,Sulfaquinoxaline,120,150,20% off,Treats coccidiosis in rats.,images/rat/sulfaquinoxaline.jpg
+rat,rat-med-18,Neomycin,100,130,23% off,Antibiotic for gut infections in rats.,images/rat/neomycin.jpg
+rat,rat-med-19,Chloramphenicol,120,150,20% off,Treats infections in rats.,images/rat/chloramphenicol.jpg
+rat,rat-med-20,Tylosin,150,200,25% off,Antibiotic for respiratory issues in rats.,images/rat/tylosin.jpg
+horse,horse-med-1,Phenylbutazone,1000,1250,20% off,Anti-inflammatory for lameness in horses.,images/horse/phenylbutazone.jpg
+horse,horse-med-2,Ivermectin Paste,700,850,18% off,Dewormer for strongyles and bots in horses.,images/horse/ivermectin-paste.jpg
+horse,horse-med-3,Omeprazole,1200,1500,20% off,Treats gastric ulcers in horses.,images/horse/omeprazole.jpg
+horse,horse-med-4,Hyaluronic Acid,900,1100,18% off,Joint supplement for horses.,images/horse/hyaluronic-acid.jpg
+horse,horse-med-5,Flunixin Meglumine,800,1000,20% off,Pain relief for colic in horses.,images/horse/flunixin-meglumine.jpg
+horse,horse-med-6,Enrofloxacin,1000,1250,20% off,Antibiotic for infections in horses.,images/horse/enrofloxacin.jpg
+horse,horse-med-7,Probiotics,500,620,19% off,Supports digestion in horses.,images/horse/probiotics.jpg
+horse,horse-med-8,Vitamin E,400,500,20% off,Boosts muscle health in horses.,images/horse/vitamin-e.jpg
+horse,horse-med-9,Dexamethasone,600,750,20% off,Anti-inflammatory for allergies in horses.,images/horse/dexamethasone.jpg
+horse,horse-med-10,Clenbuterol,800,1000,20% off,Treats respiratory issues in horses.,images/horse/clenbuterol.jpg
+horse,horse-med-11,Mineral Mix,350,450,22% off,Trace minerals for horse health.,images/horse/mineral-mix.jpg
+horse,horse-med-12,Calcium Supplement,300,380,21% off,Supports bone health in horses.,images/horse/calcium-supplement.jpg
+horse,horse-med-13,Fenbendazole,500,620,19% off,Dewormer for horses.,images/horse/fenbendazole.jpg
+horse,horse-med-14,Amoxicillin,700,850,18% off,Antibiotic for bacterial infections in horses.,images/horse/amoxicillin.jpg
+horse,horse-med-15,Vitamin B Complex,250,320,22% off,Supports recovery in horses.,images/horse/vitamin-b-complex.jpg
+horse,horse-med-16,Levamisole,400,500,20% off,Dewormer for worms in horses.,images/horse/levamisole.jpg
+horse,horse-med-17,Oxytetracycline,600,750,20% off,Treats infections in horses.,images/horse/oxytetracycline.jpg
+horse,horse-med-18,Butaphosphan,500,620,19% off,Metabolic stimulant for horses.,images/horse/butaphosphan.jpg
+horse,horse-med-19,Prednisolone,400,500,20% off,Anti-inflammatory for horses.,images/horse/prednisolone.jpg
+horse,horse-med-20,Tylosin,700,850,18% off,Antibiotic for respiratory diseases in horses.,images/horse/tylosin.jpg
+rabbit,rabbit-med-1,Fenbendazole,200,250,20% off,Dewormer for pinworms in rabbits.,images/rabbit/fenbendazole.jpg
+rabbit,rabbit-med-2,Enrofloxacin,250,320,22% off,Antibiotic for infections in rabbits.,images/rabbit/enrofloxacin.jpg
+rabbit,rabbit-med-3,Probiotics,150,190,21% off,Supports gut health in rabbits.,images/rabbit/probiotics.jpg
+rabbit,rabbit-med-4,Oxbow Critical Care,180,230,22% off,Nutritional support for sick rabbits.,images/rabbit/oxbow-critical-care.jpg
+rabbit,rabbit-med-5,Metoclopramide,200,250,20% off,Treats gut stasis in rabbits.,images/rabbit/metoclopramide.jpg
+rabbit,rabbit-med-6,Amoxicillin,200,250,20% off,Antibiotic for bacterial infections in rabbits.,images/rabbit/amoxicillin.jpg
+rabbit,rabbit-med-7,Vitamin C,100,130,23% off,Supports immunity in rabbits.,images/rabbit/vitamin-c.jpg
+rabbit,rabbit-med-8,Calcium Supplement,90,120,25% off,Supports bone health in rabbits.,images/rabbit/calcium-supplement.jpg
+rabbit,rabbit-med-9,Levamisole,150,200,25% off,Dewormer for worms in rabbits.,images/rabbit/levamisole.jpg
+rabbit,rabbit-med-10,Metronidazole,150,190,21% off,Treats gut infections in rabbits.,images/rabbit/metronidazole.jpg
+rabbit,rabbit-med-11,Prednisolone,120,150,20% off,Anti-inflammatory for rabbits.,images/rabbit/prednisolone.jpg
+rabbit,rabbit-med-12,Doxycycline,150,200,25% off,Antibiotic for respiratory infections in rabbits.,images/rabbit/doxycycline.jpg
+rabbit,rabbit-med-13,Clindamycin,150,190,21% off,Treats skin infections in rabbits.,images/rabbit/clindamycin.jpg
+rabbit,rabbit-med-14,Vitamin B Complex,100,130,23% off,Supports recovery in rabbits.,images/rabbit/vitamin-b-complex.jpg
+rabbit,rabbit-med-15,Mineral Mix,80,100,20% off,Trace minerals for rabbit health.,images/rabbit/mineral-mix.jpg
+rabbit,rabbit-med-16,Oxytetracycline,150,200,25% off,Antibiotic for infections in rabbits.,images/rabbit/oxytetracycline.jpg
+rabbit,rabbit-med-17,Neomycin,120,150,20% off,Treats gut infections in rabbits.,images/rabbit/neomycin.jpg
+rabbit,rabbit-med-18,Chloramphenicol,120,150,20% off,Antibiotic for rabbits.,images/rabbit/chloramphenicol.jpg
+rabbit,rabbit-med-19,Sulfaquinoxaline,150,190,21% off,Prevents coccidiosis in rabbits.,images/rabbit/sulfaquinoxaline.jpg
+rabbit,rabbit-med-20,Tylosin,150,200,25% off,Treats respiratory infections in rabbits.,images/rabbit/tylosin.jpg
+tortoise,tortoise-med-1,Calcium Powder,100,130,23% off,Supports shell health in tortoises.,images/tortoise/calcium-powder.jpg
+tortoise,tortoise-med-2,Vitamin D3,120,150,20% off,Prevents MBD in tortoises.,images/tortoise/vitamin-d3.jpg
+tortoise,tortoise-med-3,Reptile Multivitamin,150,190,21% off,Boosts overall health in tortoises.,images/tortoise/reptile-multivitamin.jpg
+tortoise,tortoise-med-4,Metronidazole,200,250,20% off,Treats protozoal infections in tortoises.,images/tortoise/metronidazole.jpg
+tortoise,tortoise-med-5,Baytril,250,320,22% off,Antibiotic for infections in tortoises.,images/tortoise/baytril.jpg
+tortoise,tortoise-med-6,Probiotics,100,130,23% off,Supports digestion in tortoises.,images/tortoise/probiotics.jpg
+tortoise,tortoise-med-7,Vitamin A,90,120,25% off,Prevents eye issues in tortoises.,images/tortoise/vitamin-a.jpg
+tortoise,tortoise-med-8,Calcium Gluconate,100,130,23% off,Supports bone health in tortoises.,images/tortoise/calcium-gluconate.jpg
+tortoise,tortoise-med-9,Enrofloxacin,200,250,20% off,Treats respiratory infections in tortoises.,images/tortoise/enrofloxacin.jpg
+tortoise,tortoise-med-10,Amoxicillin,150,190,21% off,Antibiotic for bacterial infections in tortoises.,images/tortoise/amoxicillin.jpg
+tortoise,tortoise-med-11,Ivermectin,120,150,20% off,Treats parasites in tortoises.,images/tortoise/ivermectin.jpg
+tortoise,tortoise-med-12,Levamisole,100,130,23% off,Dewormer for tortoises.,images/tortoise/levamisole.jpg
+tortoise,tortoise-med-13,Fenbendazole,120,150,20% off,Dewormer for worms in tortoises.,images/tortoise/fenbendazole.jpg
+tortoise,tortoise-med-14,Mineral Mix,80,100,20% off,Trace minerals for tortoise health.,images/tortoise/mineral-mix.jpg
+tortoise,tortoise-med-15,Vitamin B Complex,90,120,25% off,Supports metabolism in tortoises.,images/tortoise/vitamin-b-complex.jpg
+tortoise,tortoise-med-16,Oxytetracycline,150,190,21% off,Treats infections in tortoises.,images/tortoise/oxytetracycline.jpg
+tortoise,tortoise-med-17,Chloramphenicol,120,150,20% off,Antibiotic for tortoises.,images/tortoise/chloramphenicol.jpg
+tortoise,tortoise-med-18,Neomycin,100,130,23% off,Treats gut infections in tortoises.,images/tortoise/neomycin.jpg
+tortoise,tortoise-med-19,Sulfaquinoxaline,120,150,20% off,Prevents coccidiosis in tortoises.,images/tortoise/sulfaquinoxaline.jpg
+tortoise,tortoise-med-20,Tylosin,150,190,21% off,Treats respiratory infections in tortoises.,images/tortoise/tylosin.jpg

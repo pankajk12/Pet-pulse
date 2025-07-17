@@ -1,0 +1,42 @@
+id,animal,name,price,originalPrice,discount,description,image
+1,dog,Canvit Multivitamins,399,590,33% off,Boosts immunity & coat health,/images/dog-meds/canvit.jpg
+2,dog,VetRapid Syrup,299,360,17% off,Appetite tonic for dogs & puppies,/images/dog-meds/vetrapid.jpg
+3,dog,Dog Shot Vaccine,1199,1550,23% off,All-in-one vaccine for common diseases,/images/dog-meds/vaccine.jpg
+4,dog,FurRite Tablets,459,590,22% off,Promotes shiny coat & healthy skin,/images/dog-meds/furrite.jpg
+5,dog,Trixie Tick Drops,220,250,12% off,Controls ticks, fleas & lice instantly,/images/dog-meds/trixie.jpg
+6,dog,Immunoboost Syrup,150,220,32% off,Improves resistance and stamina,/images/dog-meds/immunoboost.jpg
+7,dog,PetJoint Relief,699,850,18% off,Joint & arthritis support supplement,/images/dog-meds/jointrelief.jpg
+8,dog,PetVita Digest,199,250,20% off,Probiotic for gut health,/images/dog-meds/petvita.jpg
+9,dog,WormAway Tablets,120,170,29% off,Complete deworming for all breeds,/images/dog-meds/wormaway.jpg
+10,dog,AcePet Eye Drops,89,120,26% off,Soothes & cleanses eyes,/images/dog-meds/eyedrops.jpg
+11,dog,PurePaws Shampoo,270,350,23% off,Cleans deep and leaves soft coat,/images/dog-meds/shampoo.jpg
+12,dog,CoolCollar Gel,139,199,30% off,Cooling gel for summer heat stress,/images/dog-meds/coolgel.jpg
+13,dog,VitalPet Chews,330,400,17% off,Vitamins & minerals in tasty chew,/images/dog-meds/chew.jpg
+14,dog,ImmuneGuard Drops,245,320,23% off,Immunity booster liquid drops,/images/dog-meds/guarddrops.jpg
+15,dog,CalciPlus Tablets,349,400,13% off,Advanced calcium for bones,/images/dog-meds/calcip.jpg
+16,dog,DogSmile Paste,90,140,36% off,Dog toothpaste for oral care,/images/dog-meds/toothpaste.jpg
+17,dog,VermiGuard Suspension,85,120,29% off,For roundworm & tapeworm removal,/images/dog-meds/vermiguard.jpg
+18,dog,FurGain Tonic,410,500,18% off,Stops excessive shedding,/images/dog-meds/furgain.jpg
+19,dog,CanFlex Forte,550,680,19% off,For senior pets’ flexibility,/images/dog-meds/canflex.jpg
+20,dog,PetWorm Dewormer,130,170,24% off,Widely effective dog dewormer,/images/dog-meds/wormer.jpg
+21,cat,CatVita Paste,249,310,20% off,Daily supplement for all cats,/images/cat-meds/vitapaste.jpg
+22,cat,Purrfect Tonic,320,410,22% off,Skin, fur & general health blend,/images/cat-meds/purrfect.jpg
+23,cat,Whisker Clean Eardrop,105,150,30% off,Ear cleaning for cats,/images/cat-meds/eardrop.jpg
+24,cat,Feline Deworm Tablets,135,175,23% off,One-dose dewormer for cats,/images/cat-meds/deworm.jpg
+25,cat,PawSoft Shampoo,185,230,20% off,Mild cleansing for sensitive cats,/images/cat-meds/shampoo.jpg
+26,cat,PurrJoy Laxative,140,200,30% off,For hairball & constipation,/images/cat-meds/laxative.jpg
+27,cat,Kittygel Multivitamin,310,400,22% off,Vitamins/minerals gel for kittens,/images/cat-meds/kittygel.jpg
+28,cat,ImmuFeline Boost,315,390,19% off,Increases kitten resistance,/images/cat-meds/immune.jpg
+29,cat,AntiTick Spray,210,270,22% off,Repels ticks & fleas,/images/cat-meds/tickspray.jpg
+30,cat,PurrGut Probiotics,199,250,20% off,Improves digestion & gut health,/images/cat-meds/probiotics.jpg
+31,cat,MeowVite Chew,129,180,28% off,Delicious chewy vitamin for cats,/images/cat-meds/chew.jpg
+32,cat,SoftFur Oil,170,210,19% off,Softens coat gently,/images/cat-meds/furoil.jpg
+33,cat,ClearSight Drops,96,120,20% off,Eye drops for infections,/images/cat-meds/eyedrops.jpg
+34,cat,PurrFresh Deodorant,80,125,36% off,Removes unpleasant cat odor,/images/cat-meds/deo.jpg
+35,cat,KittyGuard Syrup,155,210,26% off,Immunity improvement syrup,/images/cat-meds/guard.jpg
+36,cat,CalciTab Cat,122,170,28% off,Calcium & D3 for bones,/images/cat-meds/calci.jpg
+37,cat,HepaCare Cat,232,310,25% off,Liver supplement tablets for cats,/images/cat-meds/hepacare.jpg
+38,cat,TailTidy Wipes,115,140,18% off,Wet wipes for cleaning fur,/images/cat-meds/wipes.jpg
+39,cat,FurShine Lotion,275,320,14% off,Prevents matting/tangles,/images/cat-meds/lotions.jpg
+40,cat,ImmuneRise Drops,75,100,25% off,Supports natural immune health,/images/cat-meds/immune2.jpg
+... (similarly at least 20 for each animal: cow, buffalo, goat, hen, rat, rabbit, horse, tortoise)

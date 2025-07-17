@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetSewa - Dashboard</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233e8e41'/%3E%3Cpath d='M50 30c-10 0-18 8-18 18s8 18 18 18 18-8 18-18-8-18-18-18zm0 28c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z' fill='white'/%3E%3Ctext x='50' y='80' font-size='16' fill='white' text-anchor='middle' font-family='Segoe UI'%3EPetSewa%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Header & Navbar -->
+  <header>
+    <a href="/" class="logo">
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+        <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+        <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+      </svg>
+      <h1>PetSewa</h1>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/pet-medicines">Pet Medicines</a>
+      <a href="/home-services">Home Services</a>
+      <a href="/about-us">About Us</a>
+      <a href="/contact-us">Contact</a>
+      <a href="/emergency">Emergency</a>
+      <a href="/cart">
+        <span class="cart-ui-icon" style="position:relative;">
+          🛒
+          <% if(user && user.cart && user.cart.length > 0) { %>
+            <span style="background:#ff5722;color:#fff;border-radius:100px;
+            font-size:0.87em;padding:1px 9px;position:absolute;top:-10px;right:-14px;">
+              <%= user.cart.length %>
+            </span>
+          <% } %>
+        </span>
+        Cart
+      </a>
+    </nav>
+    <!-- User Dropdown Trigger -->
+    <div class="user-dropdown-trigger" id="user-dropdown-trigger" tabindex="0">
+      <a href="/dashboard" class="user-icon-link"><span class="user-icon">👤</span></a>
+      <span class="username"><%= user && user.name ? user.name : '' %></span>
+      <span class="dropdown-arrow">&#x25BC;</span>
+    </div>
+  </header>
+
+  <!-- USER SLIDE-DOWN (like Flipkart) -->
+  <div class="user-dropdown-section" id="user-dropdown-section">
+    <div class="dropdown-header">
+      <a href="/dashboard" class="user-icon-link"><span class="user-icon-big">👤</span></a>
+      <div>
+        <div class="dropdown-username"><%= user && user.name ? user.name : '' %></div>
+        <div class="dropdown-email"><%= user && user.email ? user.email : '' %></div>
+      </div>
+    </div>
+    <ul class="dropdown-list">
+      <li><a href="/dashboard"><span>📋</span> Dashboard</a></li>
+      <li><button id="logout-btn"><span>🚪</span> Logout</button></li>
+    </ul>
+  </div>
+
+  <!-- MAIN DASHBOARD -->
+  <main>
+    <section class="dashboard-hero">
+      <h2>Welcome, <%= user && user.name ? user.name : 'Guest' %>! 👋</h2>
+      <p class="dashboard-slogan">This is your personal dashboard. Here you can track all your bookings and orders!</p>
+    </section>
+
+    <!-- DASHBOARD TABLES / SECTIONS -->
+    <div class="dashboard-panels">
+      <section class="dashboard-section">
+        <h3>Your Bookings &amp; Orders</h3>
+        <div class="dashboard-table bookings-table-anim">
+          <% if (orders && orders.length > 0) { %>
+            <table class="bookings-table">
+              <thead>
+                <tr>
+                  <th>Date &amp; Time</th>
+                  <th>Type</th>
+                  <th>Items/Service</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% orders.forEach(function(order) { %>
+                  <tr class="booking-row">
+                    <td>
+                      <% let dateObj = new Date(order.date); %>
+                      <div class="booked-date">
+                        <span><%= dateObj.toLocaleDateString() %></span>
+                        <small class="booked-time"><%= dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) %></small>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="badge badge-type badge-<%= order.type ? order.type.toLowerCase() : 'other' %>">
+                        <%= (order.type || 'Other').charAt(0).toUpperCase() + (order.type || 'Other').slice(1) %>
+                      </span>
+                    </td>
+                    <td>
+                      <% order.items.forEach(function(i) { %>
+                        <div class="item-list">
+                          <span class="item-name"><%= i.name || i.service || i.medicine || i.type %></span>
+                          <% if (i.details) { %>
+                            <span class="item-details"><%= i.details %></span>
+                          <% } %>
+                          <% if (i.quantity && i.quantity > 1) { %>
+                            <span class="item-qty">x<%= i.quantity %></span>
+                          <% } %>
+                        </div>
+                      <% }) %>
+                    </td>
+                    <td>
+                      <strong>₹<%= order.total || (order.items.reduce((s, x) => s + (x.price ? x.price * (x.quantity || 1) : 0), 0)) %></strong>
+                    </td>
+                    <td>
+                      <span class="badge badge-status badge-<%= order.status && order.status.toLowerCase() %>">
+                        <%= order.status %>
+                      </span>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          <% } else { %>
+            <div class="empty-state">No bookings or orders yet.</div>
+          <% } %>
+        </div>
+      </section>
+      
+      <section class="dashboard-section">
+        <h3>Your Cart Items</h3>
+        <div class="dashboard-table">
+          <% if (cartItems && cartItems.length > 0) { %>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Details</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% cartItems.forEach(function(item) { %>
+                  <tr>
+                    <td><%= item.name || item.service || item.medicine || item.type %></td>
+                    <td>
+                      <% if (item.details) { %>
+                        <span style="font-size:0.95em; color:#777;"><%= item.details %></span>
+                      <% } else { %>
+                        -
+                      <% } %>
+                    </td>
+                    <td><%= item.quantity || 1 %></td>
+                    <td>₹<%= item.price %></td>
+                    <td>₹<%= item.price * (item.quantity || 1) %></td>
+                  </tr>
+                <% }) %>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4"><strong>Cart Total</strong></td>
+                  <td><strong>₹<%= total || cartItems.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0) %></strong></td>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="cart-actions">
+              <a href="/cart" class="btn">View Cart</a>
+              <form action="/cart/checkout" method="post" style="display: inline;">
+                <button type="submit" class="btn btn-primary">Checkout</button>
+              </form>
+            </div>
+          <% } else { %>
+            <div class="empty-state">Your cart is empty.</div>
+            <div class="cart-actions">
+              <a href="/" class="btn">Continue Shopping</a>
+            </div>
+          <% } %>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <a href="/" class="logo" aria-label="PetSewa Home Footer">
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+        <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+        <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+      </svg>
+      <p>© <%= new Date().getFullYear() %> PetSewa | All Rights Reserved</p>
+      <p>Developed by Pankaj, Shubham, and Pushpakar</p>
+    </a>
+    <nav>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="/post-contact-us">Contact Us</a>
+    </nav>
+  </footer>
+  <div id="toast-message" class="toast hidden"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <style>
+    /* Bookings Table Styles */
+    .bookings-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 16px rgba(60,80,100,0.11);
+    }
+
+    .bookings-table th, .bookings-table td {
+      padding: 14px 20px;
+      font-size: 1em;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .bookings-table th {
+      background: #f4f6fa;
+      color: #444;
+      font-weight: 700;
+      /* sticky header: */
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .booking-row {
+      transition: box-shadow 0.22s, transform 0.18s;
+      background: #f7fcfd;
+      border-radius: 8px;
+    }
+    .booking-row:hover {
+      background: #e6faff;
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 0 13px #b5ebff5c;
+    }
+    .booked-date {
+      font-weight: bold;
+      color: #256c67;
+    }
+    .booked-time {
+      color: #666;
+      display: block;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25em 0.9em;
+      border-radius: 13px;
+      font-size: 0.93em;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .badge-type { background: #d6e2fd; color: #2547a7; }
+    .badge-type-grooming    { background: #ffe9ad; color: #a3820a;}
+    .badge-type-emergency   { background: #ffb6b6; color: #a60000;}
+    .badge-type-medicine    { background: #baffd5; color: #167b41;}
+    .badge-type-other       { background: #eee; color: #222;}
+    .badge-status { background: #eceef1; color: #5e646a;}
+    .badge-status-confirmed { background: #9be69c; color: #166f24;}
+    .badge-status-pending   { background: #ffe679; color: #997600;}
+    .badge-status-completed { background: #c3ecff; color: #177ba6;}
+    .badge-status-shipped   { background: #d6cfff; color: #4729a2;}
+    .badge-status-in-progress { background: #fcf5a0; color: #94870e;}
+
+    .item-list {
+      margin-bottom: 3px;
+      line-height: 1.3;
+      transition: color 0.14s;
+    }
+    .item-list .item-name {
+      font-weight: bold; color: #234479;
+    }
+    .item-list .item-details {
+      color: #aaa; font-size: 0.98em; margin-left: 7px;
+    }
+    .item-list .item-qty {
+      background: #f2f2f2;
+      color: #0a6c15;
+      margin-left: 8px;
+      font-weight: 600;
+      padding: 0 7px;
+      border-radius: 8px;
+      font-size: 0.96em;
+    }
+    @media (max-width: 780px) {
+      .bookings-table th, .bookings-table td { padding: 0.45em 0.5em; font-size: 0.96em;}
+    }
+  </style>
+  <script>
+    // User dropdown slide-down logic (Flipkart style)
+    const trigger = document.getElementById('user-dropdown-trigger');
+    const dropdown = document.getElementById('user-dropdown-section');
+    if (trigger && dropdown) {
+      let open = false;
+      const openDropdown = () => {
+        dropdown.classList.add('open');
+        open = true;
+      }
+      const closeDropdown = () => {
+        dropdown.classList.remove('open');
+        open = false;
+      }
+      trigger.addEventListener('click', () => open ? closeDropdown() : openDropdown());
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          open ? closeDropdown() : openDropdown();
+        }
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && !trigger.contains(e.target)) closeDropdown();
+      });
+    }
+    // Logout button logic + toast message
+    const logoutBtn = document.getElementById('logout-btn');
+    if(logoutBtn) {
+      logoutBtn.addEventListener('click', async () => {
+        try {
+          const res = await fetch('/auth/logout', { method: 'GET', credentials: 'include' });
+          if (res.ok) {
+            document.getElementById('toast-message').textContent = "You are logged out.";
+            document.getElementById('toast-message').classList.remove('hidden');
+            setTimeout(() => {
+              window.location.href = '/';
+            }, 1100);
+          }
+        } catch(err) {
+          alert("Logout failed!");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

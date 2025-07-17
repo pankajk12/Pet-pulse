@@ -1,0 +1,299 @@
+/* ========== PetSewa Home Services - Modern High-level CSS ========== */
+
+/* Inherit basic styles and reset */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f8fefa;
+  color: #233;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.hero--services {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(110deg, #3e8e41 65%, #f0db4f 135%);
+  color: #fff;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(62,142,65,0.16);
+  margin-bottom: 0.5rem;
+}
+
+.hero--services .hero-content {
+  z-index: 2;
+  padding: 2.5rem 1.5rem;
+  animation: slideUp 0.8s;
+}
+
+.hero--services h2 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 0.66em;
+  letter-spacing: 1.2px;
+  color: #f0db4f;
+  text-shadow: 2px 3px 8px rgba(34,34,34,0.10);
+}
+.hero--services .slogan { font-size: 1.4rem; font-weight: 500; color: #fff; margin-bottom: 2rem; }
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff9900, #ff6b6b);
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 0.75em 2.2em;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 15px rgba(255,153,0,0.15);
+  transition: all 0.21s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background: linear-gradient(135deg, #e68a00, #ea4747);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.services {
+  background: #fff;
+  padding: 2.5rem 0 5rem;
+  text-align: center;
+}
+.services > h2 {
+  font-size: 2.2rem;
+  color: #17622d;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-card, .sub-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 30px rgba(62,142,65,0.07), 0 2px 12px rgba(0,0,0,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .27s, transform .25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-card:hover, .sub-card:hover {
+  box-shadow: 0 10px 32px rgba(62,142,65,0.21), 0 6px 28px rgba(255,153,0,0.07);
+  transform: translateY(-10px) scale(1.03);
+}
+.service-card img, .sub-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.service-card h3, .sub-card h3 {
+  font-size: 1.36rem;
+  color: #146b2b;
+  margin: 1.2em 0 0.5em;
+  font-weight: 700;
+}
+.service-card .description {
+  color: #727272;
+  margin-bottom: 0.9em;
+  font-size: 1.06em;
+}
+.price {
+  color: #b12704;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.original-price {
+  color: #a6a6a6; text-decoration: line-through; font-size: 1em; margin-left: .5em;
+}
+.discount {
+  color: #ef5350; margin-left: .5em; font-size: 1em;
+}
+.book-btn, .expand-btn {
+  width: 92%;
+  padding: .65em 0;
+  background: linear-gradient(120deg, #3e8e41, #43ba6f 110%);
+  color: #fff;
+  border: none;
+  border-radius: 0 0 18px 18px;
+  font-size: 1.11rem;
+  font-weight: 700;
+  margin-top: auto;
+  margin-bottom: .85em;
+  transition: background .21s;
+}
+.book-btn:hover, .expand-btn:hover {
+  background: linear-gradient(120deg, #278022, #17622d 120%);
+  color: #f0db4f;
+}
+
+/* Grooming Details Modal */
+.grooming-details {
+  background: #fff;
+  padding: 4rem 2% 1.4rem;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2001;
+  display: none;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 80px 10px rgba(62,142,65,0.12);
+}
+.grooming-details.active {
+  display: flex;
+  animation: modalPop .42s;
+  opacity: 1;
+}
+.grooming-details.hidden:not(.active) { display: none; }
+.grooming-details-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grooming-details h2 {
+  font-size: 2.1rem;
+  color: #135328;
+  margin-bottom: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.sub-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.7rem;
+  align-items: stretch;
+}
+
+/* Enhanced Back Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75em 2em;
+  background: linear-gradient(125deg, #278022 0%, #3e8e41 90%);
+  color: white;
+  border: none;
+  border-radius: 34px;
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  margin-bottom: 1.6em;
+  margin-top: -0.4em;
+  box-shadow: 0 2px 8px rgba(62,142,65,0.09);
+  cursor: pointer;
+  transition: background 0.19s, transform 0.13s;
+  opacity: 0; transform: translateY(10px);
+  animation: buttonFadeIn .44s ease forwards .03s;
+}
+.back-btn:hover {
+  background: linear-gradient(120deg, #17622d 0%, #215e2b 100%);
+  color: #f0db4f;
+  transform: translateY(-2px) scale(1.04);
+}
+.back-btn:active { transform: scale(0.97); }
+
+@keyframes buttonFadeIn {
+  from { opacity:0; transform:translateY(10px);}
+  to { opacity:1; transform:translateY(0);}
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(50,50,50,.32);
+  z-index: 3002;
+  justify-content: center;
+  align-items: center;
+ }
+.modal[aria-modal="true"] { display: flex;}
+.modal-content {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  width: 97%;
+  max-width: 410px;
+  text-align: center;
+  box-shadow: 0 5px 38px rgba(87,143,91,0.15);
+  position: relative;
+  animation: modalPop .40s;
+}
+.close-btn {
+  position: absolute;
+  top: 11px; right: 17px;
+  font-size: 2rem;
+  color: #949494;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color .18s;
+  font-weight: bold;
+}
+.close-btn:hover { color: #ff6b6b; }
+.modal-content h3 { font-size: 1.25rem; color: #3e8e41; margin-bottom: 1.2em; }
+.form-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+.form-group label {
+  display: block;
+  font-size: 1.05rem;
+  color: #233;
+  margin-bottom: 0.34em;
+  font-weight: 600;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.76em;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-top: .1em;
+  transition: border-color .21s;
+}
+.form-group input:focus {
+  border-color: #43ba6f;
+  outline: none;
+}
+.hidden { display: none !important;}
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes modalPop {
+  from { transform: scale(.89); opacity: 0;}
+  to { transform: scale(1); opacity: 1;}
+}
+/* Responsiveness */
+@media (max-width: 900px) {
+  .service-grid, .sub-cards { grid-template-columns: 1fr 1fr; }
+  .services h2, .grooming-details h2 { font-size: 1.4rem; }
+  .hero--services h2 { font-size: 2.1rem;}
+}
+@media (max-width: 650px) {
+  .service-grid, .sub-cards { grid-template-columns: 1fr;}
+  .hero--services { min-height: 190px;}
+  .modal-content {max-width:98vw; padding: 1.1rem;}
+  .sub-card img { height: 150px;}
+  .service-card img { height: 150px;}
+}

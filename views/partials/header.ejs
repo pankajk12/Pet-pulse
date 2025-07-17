@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <% if (user) { %>
+      <li><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/pet-medicines">Pet Medicines</a></li>
+      <li><a href="/home-services">Home Services</a></li>
+      <li><a href="/contact-us">Contact Us</a></li>
+      <li><a href="/about-us">About Us</a></li>
+      <li><a href="/emergency">Emergency</a></li>
+      <li><a href="/cart">Cart</a></li>
+      <li><a href="/auth/logout">Logout</a></li>
+    <% } else { %>
+      <li><a href="/auth/login">Login</a></li>
+      <li><a href="/auth/signup">Signup</a></li>
+    <% } %>
+  </ul>
+</nav>

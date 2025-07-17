@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetSewa - Premium Pet & Home Services</title>
+  <link rel="stylesheet" href="/css/common.css"/>
+  <link rel="stylesheet" href="/css/index-pro.css"/>
+  <link rel="icon" href="/favicon.ico"/>
+</head>
+<body>
+<%- include('partials/header-authenticated', { user }) %>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      <span class="highlight-anim">Your Pet’s Comfort, Our Priority!</span>
+      <span id="hero-animal-emoji" class="animal-emoji wow"></span>
+    </h1>
+    <p class="slogan">Humse jud jao, pets ki chinta bhul jao!</p>
+    <a href="#services" class="btn cta-btn">Explore Services</a>
+  </div>
+  <div id="animated-animals"></div>
+  <canvas id="bg-particle-canvas"></canvas>
+</section>
+
+<section class="services-section" id="services">
+  <h2>Our Top Services</h2>
+  <div class="service-slider">
+    <button class="slider-btn prev-btn">&#8249;</button>
+    <div class="service-cards-container">
+      <div class="service-card wow">
+        <img src="/images/vet.png" alt="Vet Consultation"/>
+        <div class="card-content">
+          <h3>Online Vet Consultation</h3>
+          <p>24/7 expert advice from certified vets via video or chat.</p>
+          <a href="/home-services.ejs" class="btn">Request Consultation</a>
+        </div>
+      </div>
+      <div class="service-card wow">
+        <img src="/images/pet_medicine_delivery.jpg" alt="Pet Medicine"/>
+        <div class="card-content">
+          <h3>Pet Medicine Delivery</h3>
+          <p>Fast delivery of genuine medicines for all animals.</p>
+          <a href="/pet-medicines" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="service-card wow">
+        <img src="/images/groom3.jpg" alt="Pet Grooming"/>
+        <div class="card-content">
+          <h3>Pet Grooming at Home</h3>
+          <p>Premium grooming services at your doorstep.</p>
+          <a href="#" class="btn open-modal" data-modal="grooming-modal">Book Now</a>
+        </div>
+      </div>
+      <div class="service-card wow">
+        <img src="/images/animal_training.jpg" alt="Animal Training"/>
+        <div class="card-content">
+          <h3>Animal Training</h3>
+          <p>Customized training for pets and livestock.</p>
+          <a href="/home-services" class="btn">Schedule Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn next-btn">&#8250;</button>
+  </div>
+</section>
+
+<section id="happy-pets" class="happy-pets-section">
+  <h2>Happy Pets, Happy Us!</h2>
+  <div class="happy-pets-carousel">
+    <div class="happy-pet-card"><img src="/images/happy_animal2.jpg" alt="Cows, dogs, goats"/><span>Cows</span></div>
+    <div class="happy-pet-card"><img src="/images/dog.jpg" alt="Dog"/><span>Dog</span></div>
+    <div class="happy-pet-card"><img src="/images/cat.jpg" alt="Cat"/><span>Cat</span></div>
+    <div class="happy-pet-card"><img src="/images/rabbit.jpg" alt="Rabbit"/><span>Rabbit</span></div>
+    <div class="happy-pet-card"><img src="/images/horse.jpg" alt="Horse"/><span>Horse</span></div>
+    <!-- ... add as needed ... -->
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials-section">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-card">
+      <p>"PetSewa’s emergency team saved my dog in hours!"</p>
+      <h4>— Vikram Singh</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Training my buffalo was so easy with PetSewa!"</p>
+      <h4>— Priya Yadav</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Medicines arrived super fast. Amazing service!"</p>
+      <h4>— Arjun Patel</h4>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="logo">
+    <svg width="40" height="40">
+      <circle cx="20" cy="20" r="18" fill="#3e8e41" />
+      <path d="M20 12c-4 0-7.2 3.2-7.2 7.2s3.2 7.2 7.2 7.2 7.2-3.2 7.2-7.2-3.2-7.2-7.2-7.2zm0 11.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white" />
+      <text x="20" y="34" font-size="8" fill="white" text-anchor="middle" font-family="Segoe UI">PetSewa</text>
+    </svg>
+    <h1>PetSewa</h1>
+  </a>
+  <nav>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="/contact-us">Contact Us</a>
+  </nav>
+  <p>
+    © <%= new Date().getFullYear() %> PetSewa | All Rights Reserved
+    <br />
+    Developed by Pankaj, Shubham, and Pushpakar
+  </p>
+</footer>
+
+<script src="/js/index-pro.js"></script>
+</body>
+</html>

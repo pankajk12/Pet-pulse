@@ -1,0 +1,161 @@
+body {
+  background: linear-gradient(120deg,#f7fbf7 70%, #eefafa 100%);
+}
+.about-hero {
+  padding: 56px 0 39px 0;
+  text-align: center;
+  background: linear-gradient(88deg,#e6fbef 65%,#fff3e9 100%);
+  border-bottom-left-radius: 3.8em;
+  border-bottom-right-radius: 3.8em;
+  margin-bottom: 26px;
+  box-shadow: 0 3px 32px #38e99e21;
+}
+.about-title {
+  font-size: 2.55em;
+  letter-spacing: 1.4px;
+  color: #289e5a;
+  margin-bottom: 0.18em;
+  font-family: 'Segoe UI',Arial,sans-serif;
+}
+.highlight-anim {
+  background: linear-gradient(95deg,#8ffad8 60%,#c5d6ff 100%);
+  color: #167b41;
+  border-radius: 17px;
+  padding: 2px 18px;
+  font-weight: bold;
+  margin: 0 2px;
+  animation: aboutPop 2s 1;
+  box-shadow: 0 2px 11px #cafff7;
+}
+@keyframes aboutPop {
+  0%   {transform:scale(0.94);}
+  70%  {transform:scale(1.07);}
+  100% {transform:scale(1);}
+}
+#about-animal-emoji {
+  font-size: 1.4em;
+  margin-left: 8px;
+  filter: drop-shadow(1px 2px 1px #baf9b3);
+  will-change: transform;
+}
+.about-slogan {
+  font-weight: 400;
+  color:#22685a;
+  margin-top: 0.23em;
+  margin-bottom: 0.64em;
+  font-size: 1.18em;
+}
+
+.about-main-section {
+  position:relative;
+}
+
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 36px 32px;
+  margin: 0 auto 39px auto;
+  max-width: 1170px;
+  background: transparent;
+}
+.about-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #ffe4bf18, 0 2px 0 #e9fff6 inset;
+  transition: box-shadow 0.27s, transform 0.19s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 22px 20px 26px 20px;
+  cursor:pointer;
+  border: 3px solid #f7fff1;
+  position:relative;
+  min-height:220px;
+}
+.about-card:hover {
+  box-shadow: 0 18px 46px #35ffc73b, 0 3px 0 #f3f9ff inset;
+  transform: scale(1.05) translateY(-9px) rotate(-1deg);
+  z-index: 5;
+}
+.about-card img {
+  width: 112px; height: 112px;
+  object-fit:cover;
+  border-radius:1em;
+  margin-bottom:0.35em;
+  box-shadow:0 1px 12px #6ee7c6c2;
+}
+.about-card h3 {
+  margin-top:0.15em;
+  margin-bottom:0.32em;
+  color:#198c53;
+  letter-spacing:1px;
+}
+.about-card .card-icon {
+  font-size:2em;
+  margin-bottom:0.24em;
+  display:block;
+}
+.about-card ul {
+  margin: 0 0 0.14em 17px;
+  padding: 0;
+}
+
+.about-card-detail-modal {
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(12,24,38,.32);
+  z-index:500;
+  display:none;
+  align-items: center;
+  justify-content:center;
+  animation: fadeIn .29s;
+}
+@keyframes fadeIn { 0%{opacity:0;} 100%{opacity:1;} }
+.about-card-detail-modal.active { display:flex; }
+.about-card-detail-modal .modal-content {
+  max-width:530px;
+  background:#fff;
+  border-radius: 24px;
+  box-shadow: 0 18px 60px #16ecc773, 0 2px 0 #b2ffe2 inset;
+  padding:48px 46px 25px 46px;
+  position:relative;
+  animation: popUp .48s cubic-bezier(.4,1.7,.7,1);
+}
+@keyframes popUp {
+  0%{ transform: scale(0.55);}
+  60%{ transform: scale(1.04);}
+  100%{ transform: scale(1);}
+}
+.close-detail {
+  position: absolute;
+  top: 15px; right: 19px;
+  font-size: 2em;
+  color: #98d7a3;
+  background: none; border:none; cursor:pointer;
+  transition: color 0.19s;
+  font-weight: 700;
+}
+.close-detail:hover { color: #fc5a85; }
+
+#detail-content h2 { color: #179b54; margin-top:0;}
+#detail-content p { font-size:1.09em; color:#233;}
+.detail-image {
+  width:100%; max-width:320px; display:block; border-radius:1.5em;
+  margin: 17px auto 19px auto; box-shadow:0 1px 12px #52fffe3c;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-card-grid { grid-template-columns:1fr; gap: 24px; }
+  .about-card-detail-modal .modal-content {padding:28px 7vw 20px 7vw;}
+}
+@media (max-width:600px) {
+  .about-hero{padding:2.4em 6px 1.2em 6px;}
+  .about-title{font-size:1.45em;}
+  .about-main-section {padding: 0 2vw;}
+}
+.wow {
+  opacity: 0; transform: translateY(44px);
+  transition: opacity 0.63s cubic-bezier(.29,1.8,.34,1.1), transform 0.87s cubic-bezier(.29,1.5,.34,1.1);
+}
+.wow.shown { opacity:1; transform: translateY(0);}

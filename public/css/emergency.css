@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f0f4f8;
+  overflow-x: hidden;
+}
+
+header {
+  background: #3e8e41;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo h1 {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.user-controls .icon {
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.user-controls .icon:hover {
+  color: #f0db4f;
+}
+
+nav {
+  background: #2f6f2f;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f0db4f;
+  text-decoration: underline;
+}
+
+.hero {
+  /* background: url('https://images.unsplash.com/photo-1505148230899-52e28e8a7d8d?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; */
+  background-image: url('images/emergency.png');
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  animation: heroFadeIn 1.5s ease-out;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  animation: slideUp 1s ease-out;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slogan {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #f0db4f;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.emergency {
+  padding: 5rem 2rem;
+  background: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  animation: gridFadeIn 1.5s ease-out;
+}
+
+.emergency-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0);
+  opacity: 0;
+  animation: cardPop 0.6s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.2s);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emergency-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-card h3 {
+  font-size: 2rem;
+  color: #2f6f2f;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-card p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-card p strong {
+  color: #3e8e41;
+}
+
+.contact-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-image {
+  transform: scale(1.02);
+}
+
+.call-btn {
+  padding: 1rem 2rem;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+
+.call-btn:hover {
+  background: #e60000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6);
+}
+
+.tips-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.tips-card ul li {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.tips-card ul li::before {
+  content: '🔴';
+  color: #ff4d4d;
+  position: absolute;
+  left: 0;
+}
+
+.tip-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tips-card:hover .tip-image {
+  transform: scale(1.02);
+}
+
+.care-card p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.detail-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  background: #fff;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.detail-section h2 {
+  font-size: 2.5rem;
+  color: #3e8e41;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.emergency-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #2f6f2f;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 1rem 2rem;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+
+.submit-btn:hover {
+  background: #e60000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6);
+}
+
+.back-btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #3e8e41;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(62, 142, 65, 0.4);
+}
+
+.back-btn:hover {
+  background: #2f6f2f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(62, 142, 65, 0.6);
+}
+
+.detail-section.hidden {
+  display: none;
+}
+
+footer {
+  background: #2f6f2f;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  animation: footerFadeIn 1s ease-out;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gridFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cardPop {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes footerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 2.5rem; }
+  .slogan { font-size: 1.4rem; }
+  .emergency-grid { grid-template-columns: 1fr; }
+  .emergency-card { padding: 1.5rem; }
+  .contact-image, .tip-image { height: 150px; }
+  .emergency-form { max-width: 100%; }
+  .detail-section h2 { font-size: 2rem; }
+}
