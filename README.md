@@ -13,13 +13,14 @@ PetPulse is a smart pet care web platform designed for pet owners to convenientl
 
 ### 🏠 Home Page
 
-<img src="./screenshots/screenshot-1752755085169.png" alt="Home Page Screenshot" width="800"/>
+<img width="1910" height="922" alt="screenshot-1752755085169" src="https://github.com/user-attachments/assets/adec841b-4b7f-4b69-84a1-373b76d080b1" />
 
 ---
 
 ### ✂️ Grooming Services Page
 
-<img src="./screenshots/screenshot-1752755118656.png" alt="Grooming Services Screenshot" width="800"/>
+<img width="1910" height="922" alt="screenshot-1752755118656" src="https://github.com/user-attachments/assets/1f7fa57e-5345-4e6c-aad7-707a02275cdf" />
+
 
 ---
 
