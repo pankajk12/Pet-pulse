@@ -88,8 +88,7 @@ cd PetPulse
 ## ✉️ Contact
 
 * **Email:** [pankaj7027055@gmail.com](mailto:pankaj7027055@gmail.com)
-* **LinkedIn:** \[Your LinkedIn Profile Link]
-* **Portfolio Website:** Coming Soon
+* **Portfolio Website:** https://pankajk12.github.io/
 
 ---
 
